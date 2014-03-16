@@ -1,4 +1,4 @@
-# LogitechK290FnKeySwap
+# Logitech K290 Fn Key Swap
 
 ## Purpose
 
@@ -14,7 +14,7 @@ This application is mostly a Windows port of [k290-fnkeyctl](https://github.com/
 
 This tool depends on two components:
 
-* [libusb-win32](http://sourceforge.net/projects/libusb-win32) needs to be installed. I opted to install libusb-win32-devel-filter from [here](http://sourceforge.net/projects/libusb-win32/files/libusb-win32-releases/). Then I used `install-filter-win.exe` to add libusb-win32 driver to my K290 keyboard. It showed up on that tool's list with `vid:046d`, `pid:c31f` and `mi:00`. This is a one time setup.
+* [libusb-win32](http://sourceforge.net/projects/libusb-win32/) needs to be installed. I opted to install `libusb-win32-devel-filter` from [here](http://sourceforge.net/projects/libusb-win32/files/libusb-win32-releases/). Then I used `install-filter-win.exe` to add libusb-win32 driver to my K290 keyboard. It showed up on that tool's list with `vid:046d`, `pid:c31f` and `mi:00`. This is a one time setup.
 * [LibUsbDotNet](http://sourceforge.net/projects/libusbdotnet/) is included and used as an abstraction layer over libusb-win32.
 
 ## Usage
