@@ -2,6 +2,7 @@
 {
     using System;
     using System.Linq;
+    using System.Windows.Forms;
 
     internal class Program
     {
@@ -24,7 +25,7 @@
             }
             catch (Exception exception)
             {
-                Console.WriteLine(exception.Message);
+                MessageBox.Show(exception.Message, "Logitech K290 Fn Key Swap");
                 Environment.Exit(1);
             }
         }
