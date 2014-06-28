@@ -32,7 +32,7 @@
 
                 if (keyboard == null)
                 {
-                    throw new ApplicationException("Could not find Logitech K290 device. It's not connected or libusb-win32 is not installed.");
+                    throw new KeyboardNotFoundException("Could not find Logitech K290 device. It's not connected or libusb-win32 is not installed.");
                 }
 
                 var setupPacket = new UsbSetupPacket(0x40, 2, 0x001a, (short)mode, 0);
@@ -53,7 +53,11 @@
             }
             finally
             {
-                keyboard.Close();
+                if (keyboard != null)
+                {
+                    keyboard.Close();
+                }
+
                 UsbDevice.Exit();
             }
         }

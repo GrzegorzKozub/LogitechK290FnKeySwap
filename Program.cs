@@ -23,6 +23,10 @@
                     KeyboardService.SwapFnKey();
                 }
             }
+            catch (KeyboardNotFoundException)
+            {
+                Environment.Exit(1);
+            }
             catch (Exception exception)
             {
                 MessageBox.Show(exception.Message, "Logitech K290 Fn Key Swap");
